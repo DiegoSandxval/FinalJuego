@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -11,13 +13,16 @@ public class PlayerInteractions : MonoBehaviour
         {
             GameManager.Instance.gunAmmo += other.gameObject.GetComponent<AmmoBox>().ammo;
             Destroy(other.gameObject);
+            
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("EnemyBullet"))
+
+        if (other.CompareTag("Collider"))
         {
-            GameManager.Instance.LoseHealth(5);
+            GameManager.Instance.LoseHealth(20);
+        }
+        if (other.CompareTag("Boss"))
+        {
+            SceneManager.LoadScene(4);
         }
     }
 }
