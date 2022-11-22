@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public void LoseHealth(int healthToReduce)
     {
         health -= healthToReduce;
+        CheckHealth();
     }
     public void CheckHealth()
     {
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Has Muerto");
 
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

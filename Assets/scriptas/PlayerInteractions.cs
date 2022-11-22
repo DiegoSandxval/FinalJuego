@@ -22,7 +22,7 @@ public class PlayerInteractions : MonoBehaviour
         }
         if (other.CompareTag("Boss"))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

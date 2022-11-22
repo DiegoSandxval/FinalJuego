@@ -368,6 +368,8 @@
 "Assets/scriptas/EnemyBullet.cs"
 "Assets/scriptas/EnemyShoot.cs"
 "Assets/scriptas/Escene2.cs"
+"Assets/scriptas/fINAL.cs"
+"Assets/scriptas/funcionbotones.cs"
 "Assets/scriptas/GameManager.cs"
 "Assets/scriptas/Gun.cs"
 "Assets/scriptas/Menu.cs"
